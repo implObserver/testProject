@@ -1,7 +1,5 @@
 from django.shortcuts import redirect
-
 from main.models import Url
-from users.models import CustomUser
 
 
 def url_permission_list(user):

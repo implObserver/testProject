@@ -1,6 +1,4 @@
 from django import template
-
-from main.models import Url
 from main.permissions import url_permission_list
 
 register = template.Library()
@@ -10,5 +8,3 @@ register = template.Library()
 def urls(context):
     request = context['request']
     return url_permission_list(request.user)
-
-
