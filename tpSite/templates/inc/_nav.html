@@ -15,7 +15,7 @@
 
             <span class="navbar-text">
                 {% if request.user.is_authenticated %}
-                Добро пожаловать, {{ user.username }} | <a href="{% url 'logout' %}">Выход</a>
+                Добро пожаловать, {{ user.username }}
                 {% else %}
                 <a href="{% url 'login' %}">Login</a>
                 {% endif %}
