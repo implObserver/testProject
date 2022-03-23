@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>test1</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}
+{% load tags %}
+Войти :: {{ block.super }}
+{% endblock %}
+
+{% block content %}
 <h1>test1</h1>
-</body>
-</html>
+
+<a href="{% url 'main' %}" class="list-group-item list-group-item-action">Доступные страницы</a>
+{% endblock %}
