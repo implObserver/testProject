@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
-
 {% block title %}
+
 Войти :: {{ block.super }}
 {% endblock %}
 
 {% block content %}
+{% if request.user.is_authenticated %}
+<meta http-equiv="refresh" content="0; url=main/"/>
+{% endif %}
 <h1>Войти</h1>
 <form method="post">
     {% csrf_token %}

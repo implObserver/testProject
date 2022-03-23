@@ -6,7 +6,7 @@ from users.models import CustomUser
 
 
 class Url(models.Model):
-    url = models.URLField()
+    url = models.CharField(max_length=150)
     members = models.ManyToManyField(CustomUser, related_name="members", blank=True)
 
     def get_absolute_url(self):
@@ -18,3 +18,5 @@ class Url(models.Model):
     class Meta:
         verbose_name = 'URL'
         verbose_name_plural = 'Разграничение доступа к URL'
+
+
