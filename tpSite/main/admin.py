@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import PermGroup, Url
 
-admin.site.register(PermGroup)
+from main.models import Url
+
 admin.site.register(Url)
